@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./Assets/font/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetrype'),
+         url(./Assets/font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf) format('truetrype'),
+         url(./Assets/font/Montserrat/static/Montserrat-Medium.ttf) format('truetype'),
+         url(./Assets/font/Montserrat/static/Montserrat-Black.ttf) format('truetype'),
+         url(./Assets/font/Montserrat/static/Montserrat-SemiBold.ttf) format('truetype'),
+         url(./Assets/font/Montserrat/static/Montserrat-Bold.ttf) format('truetype');
+    font-display: swap;
+    font-weight: 100 1000;
+    font-stretch: 25% 125%;
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    src: url(./Assets/font/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype'),
+         url(./Assets/font/Fraunces/Fraunces-Italic-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype'),
+         url(./Assets/font/Fraunces/static/Fraunces_144pt_Soft-Bold.ttf) format('truetype'),
+         url(./Assets/font/Fraunces/static/Fraunces_144pt-Bold.ttf) format('truetype');
+    font-stretch: 25% 125%;
+    font-weight: 100 1000;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container p {
+    font-family: 'Montserrat';
+}
+
+h1, h2 {
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+}
+
+.mobile {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.dekstop {
+    display: none;
+}
+
+.product {
+    margin-top: 0.7rem;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.product.type {
+    letter-spacing: 0.3rem;
+    color: hsla(228, 12%, 48%, 0.651);
+}
+
+.product.title {
+    line-height: 2.2rem;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.product.description {
+    color: hsl(228, 12%, 48%);
+    font-size: 0.9rem;
+    margin-bottom: 0.7rem;
+}
+
+.product.price {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.8rem;
+}
+
+.product.price h2 {
+    font-size: 2.2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.product.price p {
+    align-self: center;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    padding-left: 1rem;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+}
+
+.add {
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    border-radius: 10px;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.add svg {
+    margin-right: 0.5rem;
+}
+
+.add:hover {
+    background-color: hsl(157, 50%, 20%);
+}
+
+@media (min-width: 426px) {
+    .container {
+        width: 50rem;
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .dekstop {
+        display: block;
+        width: 25rem;
+        border-radius: 1rem;
+    }
+
+    .product {
+        margin-left: 1.5rem;
+        margin-right: 2rem;
+        margin-top: 1.2rem;
+    }
+
+    .product.type {
+        font-size: 1.2rem;
+    }
+
+    .product.title {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .product.description {
+        font-size: 1.1rem;
+    }
+
+    .product.price {
+        margin-bottom: 2rem;
+    }
+
+    .add {
+        width: 95%;
+        margin-left: 0.8rem;
+    }
+}
